@@ -13,4 +13,3 @@ deploy:
   on:
     tags: true
     repo: iliocatallo/typista
-  skip_cleanup: 'true'

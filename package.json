@@ -2,7 +2,7 @@
   "author": "Ilio Catallo <info@iliocatallo.it>",
   "name": "typista",
   "version": "1.0.0",
-  "description": "Structured types with sugar on top",
+  "description": " ML-inspired structured types",
   "homepage": "https://github.com/iliocatallo/typista#readme",
   "license": "MIT",
   "repository": {

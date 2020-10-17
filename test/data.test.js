@@ -123,3 +123,16 @@ describe('[data] A constructor of a structured type', function () {
         expect(Maybe.isPrototypeOf(Maybe.Just)).to.be.true;
     });
 });
+
+describe('[data] A value of a structured type', function () {
+    it('should be deconstructible to its components', function () {
+        const These = data('These');
+        These.$ = $.This('x')
+                | $.That('y')
+                | $.Both('x', 'y');
+
+        const [x, y] = These.Both(1, 2);
+        expect(x).to.equal(1);
+        expect(y).to.equal(2);
+    });
+});

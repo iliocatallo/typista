@@ -22,7 +22,7 @@
 
 ## Introduction
 
-Typista is a JavaScript library that provides a more compact syntax for defining an abstract class along with a set of associated concrete classes. Using Typista, one may write
+Typista is a JavaScript library that provides a compact syntax for defining an abstract class along with a set of associated concrete classes. Using Typista, one may write
 
 ```javascript
 const Maybe = data('Maybe');
@@ -45,7 +45,7 @@ class Just extends Maybe {
 }
 ```
 
-That is, Typista simplifies the definition of _structured types_<sup>1</sup> – also known as _algebraic data types_<sup>2</sup>, _variant types_<sup>3</sup> or _custom types_<sup>4</sup>.
+That is, Typista simplifies the definition of _structured types_<sup> 1</sup> – also known as _algebraic data types_<sup> 2</sup>, _variant types_<sup> 3</sup> or _custom types_<sup> 4</sup>.
 
 
 ## Installation
@@ -102,9 +102,9 @@ const m4 = m3.map(x => x + 2);  // => Nothing {}
 
 ---
 
-1: https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/<br>
-2: http://wiki.haskell.org/Algebraic_data_type <br/>
-3: https://reasonml.github.io/docs/en/variant <br/>
-4: https://guide.elm-lang.org/types/custom_types.html
+[1]: [Simon Peyton Jones – The Implementation of Functional Programming Languages](https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/)<br>
+[2]: [Wikipedia – Algebraic Data Type](http://wiki.haskell.org/Algebraic_data_type)<br/>
+[3]: [ReasonML – Variants](https://reasonml.github.io/docs/en/variant) <br/>
+[4]: [Elm – Custom Types](https://guide.elm-lang.org/types/custom_types.html)
 
 Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

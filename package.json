@@ -1,26 +1,26 @@
 {
   "author": "Ilio Catallo <info@iliocatallo.it>",
   "name": "typista",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": " ML-inspired structured types",
   "homepage": "https://github.com/iliocatallo/typista#readme",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/iliocatallo/typista.git"
+    "type": "git",
+    "url": "git+https://github.com/iliocatallo/typista.git"
   },
   "bugs": {
-      "url": "https://github.com/iliocatallo/typista/issues"
+    "url": "https://github.com/iliocatallo/typista/issues"
   },
   "keywords": [
-      "adt",
-      "algebraic",
-      "data",
-      "type",
-      "union",
-      "class",
-      "constructor",
-      "structured"
+    "adt",
+    "algebraic",
+    "data",
+    "type",
+    "union",
+    "class",
+    "constructor",
+    "structured"
   ],
   "main": "index.js",
   "directories": {

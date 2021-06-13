@@ -131,7 +131,7 @@ describe('[data] A value of a structured type', function () {
                 | $.That('y')
                 | $.Both('x', 'y');
 
-        const [x, y] = These.Both(1, 2);
+        const {x, y} = These.Both(1, 2);
         expect(x).to.equal(1);
         expect(y).to.equal(2);
     });

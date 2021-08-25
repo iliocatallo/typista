@@ -5,13 +5,13 @@
 <br/>
 
 <div align="center"><a href="https://travis-ci.org/iliocatallo/typista">
-  <img src="https://travis-ci.org/iliocatallo/typista.svg?branch=master" alt="Travis CI">
+  <img alt="Build status" src="https://travis-ci.org/iliocatallo/typista.svg?branch=master">
 </a>
   <a href="https://coveralls.io/github/iliocatallo/typista">
-  <img src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master" alt="Coverage">
+  <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">
 </a>
-  <a href="https://david-dm.org/iliocatallo/typista" title="Dependencies status">
-  <img src="https://david-dm.org/iliocatallo/typista/status.svg">
+  <a href="https://david-dm.org/iliocatallo/typista">
+  <img alt="Dependencies" src="https://david-dm.org/iliocatallo/typista/status.svg">
 </a></div>
 
 # Table of contents
@@ -26,7 +26,7 @@ Typista is a JavaScript library that provides a compact syntax for defining an a
 
 ```javascript
 const Maybe = data('Maybe');
-Maybe.$ = $.Nothing 
+Maybe.$ = $.Nothing
         | $.Just('x');
 ```
 
@@ -73,7 +73,7 @@ A value of type `Maybe` may either be empty or contain a value `x`. We represent
 const {data, $} = require('typista');
 
 const Maybe = data('Maybe');
-Maybe.$ = $.Nothing 
+Maybe.$ = $.Nothing
         | $.Just('x');
 ```
 

@@ -6,9 +6,13 @@
 const {data, $} = require('../lib/data'),
       {expect}  = require('chai');
 
-describe('[data] A structured type', function () {
+describe('A structured type', function () {
 
-    it('should be inhabitable by 0-arity constructors', function () {
+    it('must have a name', function () {
+        expect(() => data()).to.throw();
+    });
+
+    it('can be inhabited by 0-arity constructors', function () {
         const Level = data('Level');
         Level.$ = $.High
                 | $.Medium
@@ -17,7 +21,7 @@ describe('[data] A structured type', function () {
         expect(Level.High).to.exist;
     });
 
-    it('should be inhabitable by n-arity constructors', function () {
+    it('can be inhabited by n-arity constructors', function () {
         const Result = data('Result');
         Result.$ = $.Ok('x')
                  | $.Error('err');
@@ -26,7 +30,7 @@ describe('[data] A structured type', function () {
         expect(Result.Error).to.exist;
     });
 
-    it('should be inhabitable by constructors of different arities', function () {
+    it('can be inhabited by constructors of different arities', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -35,22 +39,18 @@ describe('[data] A structured type', function () {
         expect(Maybe.Just).to.exist;
     });
 
-    it('should be inhabitable exactly once', function () {
+    it('is inhabitable exactly once', function () {
         const Void = data('Void');
         Void.$ = $.Void;
         expect(() => Void.$ = $.Void).to.throw();
     });
 
-    it('should not be inhabited without specifying a name for it', function () {
-        expect(() => data()).to.throw();
-    });
-
-    it('should not be inhabited without specifying at least one constructor', function () {
+    it('can only be inhabited by constructors', function () {
         const Level = data('Level');
         expect(() => Level.$ = 5).to.throw();
     });
 
-    it('should be a named constructor function', function () {
+    it('is a named constructor function', function () {
         const Level = data('Level');
         Level.$ = $.High
                 | $.Medium
@@ -60,7 +60,7 @@ describe('[data] A structured type', function () {
         expect(Level.name).to.be.equal('Level');
     });
 
-    it('should not be instantiable', function () {
+    it('cannot be instantied', function () {
         const Level = data('Level');
         Level.$ = $.High
                 | $.Medium
@@ -70,9 +70,9 @@ describe('[data] A structured type', function () {
     });
 });
 
-describe('[data] A constructor of a structured type', function () {
+describe('A constructor of a structured type', function () {
 
-    it('should be a named constructor function', function () {
+    it('is a named constructor function', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -85,7 +85,7 @@ describe('[data] A constructor of a structured type', function () {
         expect(Maybe.Just.length).to.equal(1);
     });
 
-    it('should be callable with or without new', function () {
+    it('can be invoked with or without new', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -96,7 +96,7 @@ describe('[data] A constructor of a structured type', function () {
         expect(() => Maybe.Just(5)).to.not.throw;
     });
 
-    it('should create instances of itself', function () {
+    it('creates instances of itself', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -105,7 +105,7 @@ describe('[data] A constructor of a structured type', function () {
         expect(Maybe.Nothing()).to.be.instanceof(Maybe.Nothing);
     });
 
-    it('should create instances of its structured type', function () {
+    it('creates instances of its structured type', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -114,7 +114,7 @@ describe('[data] A constructor of a structured type', function () {
         expect(Maybe.Nothing()).to.be.instanceof(Maybe);
     });
 
-    it('should include the structured type function in its prototype chain', function () {
+    it('includes the structured type in its prototype chain', function () {
         const Maybe = data('Maybe');
         Maybe.$ = $.Nothing
                 | $.Just('x');
@@ -124,8 +124,8 @@ describe('[data] A constructor of a structured type', function () {
     });
 });
 
-describe('[data] A value of a structured type', function () {
-    it('should be deconstructible to its components', function () {
+describe('A value of a structured type', function () {
+    it('is deconstructible to its components', function () {
         const These = data('These');
         These.$ = $.This('x')
                 | $.That('y')

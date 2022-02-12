@@ -10,8 +10,8 @@
   <a href="https://coveralls.io/github/iliocatallo/typista">
   <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">
 </a>
-  <a href="https://david-dm.org/iliocatallo/typista">
-  <img alt="Dependencies" src="https://david-dm.org/iliocatallo/typista/status.svg">
+  <a href="https://bundlephobia.com/package/typista">
+  <img alt="Dependencies" src="https://badgen.net/bundlephobia/dependency-count/typista">
 </a></div>
 
 # Table of contents

@@ -28,14 +28,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text mocha --recursive --reporter spec",
+    "test": "nyc --reporter=lcov --reporter=text uvu test",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
-    "mocha": "^7.2.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "uvu": "^0.5.3"
   },
   "volta": {
     "node": "16.14.0",

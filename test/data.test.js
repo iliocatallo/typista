@@ -9,7 +9,7 @@ test('A structured type must have a name', function () {
     assert.throws(() => data());
 });
 
-test('can be inhabited by 0-arity constructors', function () {
+test('A structured type can be inhabited by 0-arity constructors', function () {
     const Level = data('Level');
     Level.$ = $.High
             | $.Medium

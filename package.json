@@ -1,7 +1,7 @@
 {
   "author": "Ilio Catallo <info@iliocatallo.it>",
   "name": "typista",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": " ML-inspired structured types",
   "homepage": "https://github.com/iliocatallo/typista#readme",
   "license": "MIT",

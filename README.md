@@ -5,8 +5,8 @@
 <br/>
 
 <div align="center">
-  <a href="https://travis-ci.org/iliocatallo/typista">
-    <img alt="Build status" src="https://travis-ci.org/iliocatallo/typista.svg?branch=master">
+  <a href="https://github.com/iliocatallo/typista/actions/workflows/ci.yml">
+    <img alt="Build status" src="https://github.com/iliocatallo/typista/actions/workflows/ci.yml/badge.svg"/>
   </a>
   <a href="https://coveralls.io/github/iliocatallo/typista">
     <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">

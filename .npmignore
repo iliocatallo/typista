@@ -5,4 +5,4 @@ out
 .nyc_output
 
 #build tools
-.travis.yml
+.github

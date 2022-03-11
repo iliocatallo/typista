@@ -4,12 +4,13 @@
 </div>
 <br/>
 
-<div align="center"><a href="https://travis-ci.org/iliocatallo/typista">
-  <img alt="Build status" src="https://travis-ci.org/iliocatallo/typista.svg?branch=master">
-</a>
+<div align="center">
+  <a href="https://travis-ci.org/iliocatallo/typista">
+    <img alt="Build status" src="https://travis-ci.org/iliocatallo/typista.svg?branch=master">
+  </a>
   <a href="https://coveralls.io/github/iliocatallo/typista">
-  <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">
-</a>
+    <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">
+  </a>
   <a href="https://bundlephobia.com/package/typista">
     <img alt="Dependencies" src="https://badgen.net/bundlephobia/dependency-count/typista"/>
   </a>

@@ -29,11 +29,10 @@
   },
   "scripts": {
     "test": "c8 ---include=lib uvu test",
-    "coveralls": "c8 report --reporter=text-lcov | coveralls"
+    "coverage": "c8 report --reporter=lcov"
   },
   "devDependencies": {
     "c8": "^7.11.0",
-    "coveralls": "^3.1.1",
     "uvu": "^0.5.3"
   },
   "volta": {

@@ -11,8 +11,9 @@
   <img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master">
 </a>
   <a href="https://bundlephobia.com/package/typista">
-  <img alt="Dependencies" src="https://badgen.net/bundlephobia/dependency-count/typista">
-</a></div>
+    <img alt="Dependencies" src="https://badgen.net/bundlephobia/dependency-count/typista"/>
+  </a>
+</div>
 
 # Table of contents
 

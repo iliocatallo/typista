@@ -57,7 +57,7 @@ npm install typista
 In the following, we show how to define a `Maybe` data type useful to represent optional values. We define this new type by means of the `data` function.
 
 ```javascript
-const {data, $} = require('typista');
+import { data, $ } from 'typista';
 
 const Maybe = data('Maybe');
 ```
@@ -66,7 +66,7 @@ A value of type `Maybe` may either be empty or contain a value `x`. We represent
 
 
 ```javascript
-const {data, $} = require('typista');
+import { data, $ } from 'typista';
 
 const Maybe = data('Maybe');
 Maybe.$ = $.Nothing

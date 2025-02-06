@@ -6,3 +6,6 @@ out
 
 #build tools
 .github
+
+#dev env
+pkgx.yaml

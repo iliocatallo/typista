@@ -8,4 +8,4 @@ out
 .github
 
 #dev env
-pkgx.yaml
+mise.toml

@@ -28,11 +28,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "c8 ---include=lib uvu test",
+    "test": "c8 ---include=lib node --test-reporter dot --test test/**.test.js",
     "coverage": "c8 report --reporter=lcov"
   },
   "devDependencies": {
-    "c8": "^10.1.3",
-    "uvu": "^0.5.3"
+    "c8": "^10.1.3"
   }
 }

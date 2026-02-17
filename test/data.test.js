@@ -1,8 +1,8 @@
 /* jshint node: true, esversion: 6 */
 'use strict';
 
-const {test}    = require('uvu'),
-      assert    = require('uvu/assert'),
+const {test}    = require('node:test'),
+      assert    = require('node:assert/strict'),
       {data, $} = require('../lib/data');
 
 test('A structured type must have a name', function () {
@@ -39,7 +39,7 @@ test('A structured type can be inhabited by constructors of different arities', 
 test('A structured type is inhabitable exactly once', function () {
     const Void = data('Void');
     Void.$ = $.Void;
-    
+
     assert.throws(() => Void.$ = $.Void);
 });
 
@@ -55,8 +55,8 @@ test('A structured type is a named constructor function', function () {
             | $.Medium
             | $.Low;
 
-    assert.is(typeof Level, 'function');
-    assert.is(Level.name, 'Level');
+    assert.equal(typeof Level, 'function');
+    assert.equal(Level.name, 'Level');
 });
 
 test('A structured type cannot be instantied', function () {
@@ -73,12 +73,12 @@ test('A constructor of a structured type is a named constructor function', funct
     Maybe.$ = $.Nothing
             | $.Just('x');
 
-    assert.is(typeof Maybe.Nothing, 'function');
-    assert.is(typeof Maybe.Just, 'function');
-    assert.is(Maybe.Nothing.name, 'Nothing');
-    assert.is(Maybe.Just.name, 'Just');
-    assert.is(Maybe.Nothing.length, 0);
-    assert.is(Maybe.Just.length, 1);
+    assert.equal(typeof Maybe.Nothing, 'function');
+    assert.equal(typeof Maybe.Just, 'function');
+    assert.equal(Maybe.Nothing.name, 'Nothing');
+    assert.equal(Maybe.Just.name, 'Just');
+    assert.equal(Maybe.Nothing.length, 0);
+    assert.equal(Maybe.Just.length, 1);
 });
 
 test('A constructor of a structured type can be invoked with or without new', function () {
@@ -86,10 +86,10 @@ test('A constructor of a structured type can be invoked with or without new', fu
     Maybe.$ = $.Nothing
             | $.Just('x');
 
-    assert.not.throws(() => new Maybe.Nothing());
-    assert.not.throws(() => Maybe.Nothing());
-    assert.not.throws(() => new Maybe.Just(5));
-    assert.not.throws(() => Maybe.Just(5));
+    assert.doesNotThrow(() => new Maybe.Nothing());
+    assert.doesNotThrow(() => Maybe.Nothing());
+    assert.doesNotThrow(() => new Maybe.Just(5));
+    assert.doesNotThrow(() => Maybe.Just(5));
 });
 
 test('A constructor of a structured type creates instances of itself', function () {
@@ -97,8 +97,8 @@ test('A constructor of a structured type creates instances of itself', function 
     Maybe.$ = $.Nothing
             | $.Just('x');
 
-    assert.instance(Maybe.Just(5), Maybe.Just);
-    assert.instance(Maybe.Nothing(), Maybe.Nothing);
+    assert(Maybe.Just(5) instanceof Maybe.Just);
+    assert(Maybe.Nothing() instanceof Maybe.Nothing);
 });
 
 test('A constructor of a structured type creates instances of its structured type', function () {
@@ -106,8 +106,8 @@ test('A constructor of a structured type creates instances of its structured typ
     Maybe.$ = $.Nothing
             | $.Just('x');
 
-    assert.instance(Maybe.Just(5), Maybe);
-    assert.instance(Maybe.Nothing(), Maybe);
+    assert(Maybe.Just(5) instanceof Maybe);
+    assert(Maybe.Nothing() instanceof Maybe);
 });
 
 test('A constructor of a structured type includes the structured type in its prototype chain', function () {
@@ -126,8 +126,6 @@ test('A value of a structured type is deconstructible to its components', functi
             | $.Both('x', 'y');
 
     const {x, y} = These.Both(1, 2);
-    assert.is(x, 1);
-    assert.is(y, 2);
+    assert.equal(x, 1);
+    assert.equal(y, 2);
 });
-
-test.run();

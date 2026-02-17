@@ -5,9 +5,9 @@
 <br/>
 
 <div align="center">
+  <a href="https://www.npmjs.com/package/typista"><img alt="NPM" src="https://badgen.net/npm/v/typista"/></a>
   <a href="https://github.com/iliocatallo/typista/actions/workflows/ci.yml"><img alt="Build status" src="https://github.com/iliocatallo/typista/actions/workflows/ci.yml/badge.svg"/></a>
   <a href="https://coveralls.io/github/iliocatallo/typista"><img alt="Coverage" src="https://coveralls.io/repos/github/iliocatallo/typista/badge.svg?branch=master"></a>
-  <a href="https://bundlephobia.com/package/typista"><img alt="Dependencies" src="https://badgen.net/bundlephobia/dependency-count/typista"/></a>
 </div>
 
 # Table of contents

@@ -32,6 +32,6 @@
     "coverage": "c8 report --reporter=lcov"
   },
   "devDependencies": {
-    "c8": "^10.1.3"
+    "c8": "^11.0.0"
   }
 }
